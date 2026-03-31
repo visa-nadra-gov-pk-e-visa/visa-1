@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pak Visa - Application Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pak-green: #1e5631;
+            --visa-blue: #337ab7;
+            --text-gray: #777777;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styling */
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #e1e1e1;
+            padding: 5px 15px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            border-left: 1px solid #ddd;
+            padding-left: 10px;
+            line-height: 1;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+            color: var(--pak-green);
+            letter-spacing: -1px;
+        }
+
+        .logo-text p {
+            font-size: 8px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--pak-green);
+        }
+
+        /* Main Container */
+        .visa-card {
+            max-width: 680px;
+            margin: 0 auto;
+            border-radius: 3px;
+            background: #faf8f8;
+            /* Subtle off-white from image */
+            padding-bottom: 40px;
+            min-height: 100vh;
+        }
+
+        /* Top Blue Accent */
+        .top-accent {
+            width: 60px;
+            height: 4px;
+            background-color: #337ab7;
+            margin: 20px auto;
+        }
+
+        /* Reference Section */
+        .ref-label {
+            color: var(--visa-blue);
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .ref-val {
+            color: var(--visa-blue);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        /* Profile Image */
+        .profile-box {
+            margin-bottom: 30px;
+        }
+
+        .profile-box img {
+            width: 170px;
+            height: 210px;
+            object-fit: cover;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Data Fields - Exact Matching Colors */
+        .field-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            margin-top: 22px;
+            margin-bottom: 4px;
+        }
+
+        .field-value {
+            font-size: 17px;
+            font-weight: 500;
+            color: #555555;
+            margin-bottom: 0;
+        }
+
+        /* Button - Direct Match */
+        .btn-back {
+            background-color: #0069aa;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 4px;
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        .gov-footer {
+            border-top: 1px solid #eee;
+            padding: 20px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #444;
+            text-align: center;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        /* Navbar Toggler Fix */
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="top-logo.png" alt="Gov Logo">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav py-3">
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Check Status</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="visa-card text-center">
+        <div class="top-accent"></div>
+
+        <div class="ref-label">Visa Reference Number -</div>
+        <div class="ref-val">88004297124</div>
+
+        <div class="profile-box">
+            <img src="karimimg.jpeg" alt="Applicant">
+        </div>
+
+        <div class="field-label">NAME</div>
+        <div class="field-value">shabacha kos chosh</div>
+
+        <div class="field-label">Passport No</div>
+        <div class="field-value">P00059839</div>
+
+        <div class="field-label">Passport Country</div>
+        <div class="field-value">Afghanistan</div>
+
+        <div class="field-label">Visa Category</div>
+        <div class="field-value">Tourist/Visit</div>
+
+        <div class="field-label">Visa Sub Category</div>
+        <div class="field-value">Individual (less Than 3 Months)</div>
+
+        <div class="field-label">Application Type</div>
+        <div class="field-value">Entry</div>
+
+        <div class="field-label">Staying Facility</div>
+        <div class="field-value">Multiple Entry - Upto 1 Year</div>
+
+        <div class="field-label">Visa Start Date</div>
+        <div class="field-value">20 nov 2024</div>
+
+        <div class="field-label">Visa End Date</div>
+        <div class="field-value">19 may 2025</div>
+
+        <div class="field-label">Visa Duration</div>
+        <div class="field-value">60 day(s)</div>
+
+        <button class="btn btn-back">Back to Login</button>
+    </div>
+
+    <footer class="gov-footer">
+        COPYRIGHT © 2015 - 2026 MINISTRY OF INTERIOR,<br>
+        GOVERNMENT OF PAKISTAN - V: 6.0.0
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
