@@ -28,12 +28,13 @@
         .navbar {
             background-color: #fff;
             border-bottom: 1px solid #e1e1e1;
-            padding: 5px 15px;
+            padding: 10px 15px;
         }
 
         .navbar-brand {
             display: flex;
             align-items: center;
+            padding: 10px;
         }
 
         .navbar-brand img {
@@ -72,6 +73,7 @@
             /* Subtle off-white from image */
             padding-bottom: 40px;
             min-height: 100vh;
+            margin: 50px 25px 50px 25px;
         }
 
         /* Top Blue Accent */
@@ -79,7 +81,6 @@
             width: 60px;
             height: 4px;
             background-color: #337ab7;
-            margin: 20px auto;
         }
 
         /* Reference Section */
@@ -88,6 +89,7 @@
             font-size: 19px;
             font-weight: 600;
             margin-bottom: 8px;
+            padding-top: 15px;
         }
 
         .ref-val {
@@ -139,6 +141,26 @@
             margin-top: 40px;
         }
 
+        .navbar-nav {
+            background: #1E2738;
+            padding: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: white;
+            padding: 15px 20px !important;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #337ab7;
+            background-color: rgba(51, 122, 183, 0.1);
+            padding-left: 25px !important;
+        }
+
         /* Footer */
         .gov-footer {
             border-top: 1px solid #eee;
@@ -154,81 +176,205 @@
         /* Navbar Toggler Fix */
         .navbar-toggler {
             border: none;
+            position: relative;
+            padding: 10px;
+            margin: 5px;
         }
 
         .navbar-toggler:focus {
             box-shadow: none;
         }
+
+        .navbar-toggler-icon {
+            background: none;
+            position: relative;
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            transition: all 0.3s ease;
+            left: 3px;
+        }
+
+        .navbar-toggler-icon::before {
+            top: 8px;
+        }
+
+        .navbar-toggler-icon::after {
+            top: 20px;
+        }
+
+        .navbar-toggler-icon span {
+            display: block;
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: #333;
+            top: 14px;
+            left: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Cross animation when menu is open */
+        .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+            transform: rotate(45deg);
+            top: 14px;
+        }
+
+        .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+            transform: rotate(-45deg);
+            top: 14px;
+        }
+
+        .navbar-toggler:not(.collapsed) .navbar-toggler-icon span {
+            opacity: 0;
+        }
+
+        .navbar {
+            padding: 0 !important;
+        }
+
+        .container-fluid {
+            padding: 0 !important;
+        }
+
+        .navbar-collapse {
+            padding: 0 !important;
+        }
+
+        .navbar-nav {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        .nav-item {
+            width: 100% !important;
+        }
+
+        .nav-link {
+            padding: 12px 20px !important;
+            width: 100% !important;
+        }
+
+        /* Remove Bootstrap margins from collapsed navbar */
+        @media (max-width: 991.98px) {
+            .navbar {
+                padding: 0 !important;
+            }
+
+            .container-fluid {
+                padding: 0 !important;
+            }
+
+            .navbar-collapse {
+                padding: 0 !important;
+            }
+
+            .navbar-nav {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            .nav-item {
+                width: 100% !important;
+            }
+
+            .nav-link {
+                padding: 12px 20px !important;
+                width: 100% !important;
+            }
+        }
     </style>
+    <link rel="shortcut icon" href="https://visa.nadra.gov.pk/wp-content/uploads/2019/02/2.fw_.ico">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="top-logo.png" alt="Gov Logo">
+    <div class="main">
+        <nav class="navbar navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="top-logo.png" alt="Gov Logo">
 
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav py-3">
-                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Check Status</a></li>
-                </ul>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav py-3">
+                        <li class="nav-item"><a class="nav-link" href="https://visa.nadra.gov.pk/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="https://visa.nadra.gov.pk/guidelines">Guidelines</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="https://visa.nadra.gov.pk/downloads">Downloads</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://visa.nadra.gov.pk/faq">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://visa.nadra.gov.pk/contact-us">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+
+        <div class="visa-card text-center m-auto my-5">
+            <div class="top-accent"></div>
+
+            <div class="ref-label">Visa Reference Number -</div>
+            <div class="ref-val">88004297124</div>
+
+            <div class="profile-box">
+                <img src="karimimg.jpeg" alt="Applicant">
+            </div>
+
+            <div class="field-label">NAME</div>
+            <div class="field-value">Rasooli Kariumullah</div>
+
+            <div class="field-label">Passport No</div>
+            <div class="field-value">P00059839</div>
+
+            <div class="field-label">Passport Country</div>
+            <div class="field-value">Afghanistan</div>
+
+            <div class="field-label">Visa Category</div>
+            <div class="field-value">Medical</div>
+
+            <div class="field-label">Visa Sub Category</div>
+            <div class="field-value">Short-Term</div>
+
+            <div class="field-label">Application Type</div>
+            <div class="field-value">Entry</div>
+
+            <div class="field-label">Staying Facility</div>
+            <div class="field-value">Single Entry</div>
+
+            <div class="field-label">Visa Start Date</div>
+            <div class="field-value">20 mar 2026</div>
+
+            <div class="field-label">Visa End Date</div>
+            <div class="field-value">21 jun 2026</div>
+
+            <div class="field-label">Visa Duration</div>
+            <div class="field-value">60 day(s)</div>
+
+            <button class="btn btn-back">Back to Login</button>
         </div>
-    </nav>
 
-    <div class="visa-card text-center">
-        <div class="top-accent"></div>
-
-        <div class="ref-label">Visa Reference Number -</div>
-        <div class="ref-val">88004297124</div>
-
-        <div class="profile-box">
-            <img src="karimimg.jpeg" alt="Applicant">
-        </div>
-
-        <div class="field-label">NAME</div>
-        <div class="field-value">shabacha kos chosh</div>
-
-        <div class="field-label">Passport No</div>
-        <div class="field-value">P00059839</div>
-
-        <div class="field-label">Passport Country</div>
-        <div class="field-value">Afghanistan</div>
-
-        <div class="field-label">Visa Category</div>
-        <div class="field-value">Tourist/Visit</div>
-
-        <div class="field-label">Visa Sub Category</div>
-        <div class="field-value">Individual (less Than 3 Months)</div>
-
-        <div class="field-label">Application Type</div>
-        <div class="field-value">Entry</div>
-
-        <div class="field-label">Staying Facility</div>
-        <div class="field-value">Multiple Entry - Upto 1 Year</div>
-
-        <div class="field-label">Visa Start Date</div>
-        <div class="field-value">20 nov 2024</div>
-
-        <div class="field-label">Visa End Date</div>
-        <div class="field-value">19 may 2025</div>
-
-        <div class="field-label">Visa Duration</div>
-        <div class="field-value">60 day(s)</div>
-
-        <button class="btn btn-back">Back to Login</button>
+        <footer class="gov-footer">
+            COPYRIGHT © 2015 - 2026 MINISTRY OF INTERIOR,<br>
+            GOVERNMENT OF PAKISTAN - V: 6.0.0
+        </footer>
     </div>
-
-    <footer class="gov-footer">
-        COPYRIGHT © 2015 - 2026 MINISTRY OF INTERIOR,<br>
-        GOVERNMENT OF PAKISTAN - V: 6.0.0
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
